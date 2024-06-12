@@ -35,12 +35,15 @@ function GenerateQuestion(tableNumber){
     // multiplication (0) or division (1)
     let decision = Math.floor(Math.random()*2);
 
+    // question paragraph
+    let question = document.getElementById("question");
+    
     if (decision == 0) {
         answer = tableNumber * randomNr;
-        document.getElementById("question").innerText = randomNr + " x " + tableNumber;
+        question.innerText = randomNr + " x " + tableNumber;
     } else {
         answer = randomNr;
-        document.getElementById("question").innerText = (randomNr * tableNumber) + " : " + tableNumber;
+        question.innerText = (randomNr * tableNumber) + " : " + tableNumber;
     }
 }
 
